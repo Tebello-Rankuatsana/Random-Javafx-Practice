@@ -67,6 +67,12 @@ public class AnimationPractice extends Application{
         Timeline rect_timeline = new Timeline(kf);
         rect_timeline.play();
 
+        // Second Rectangle animation
+        KeyValue keyV = new KeyValue(rect_two.rotateProperty(), 340);
+        KeyFrame keyF = new KeyFrame(Duration.seconds(10), keyV);
+        Timeline rect_two_Timeline = new Timeline(keyF);
+        rect_two_Timeline.play();
+
 
         // Buttons that control animation
 
