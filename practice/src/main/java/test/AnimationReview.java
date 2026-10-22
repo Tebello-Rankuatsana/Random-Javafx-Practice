@@ -1,7 +1,11 @@
 package test;
 
 import java.io.IOException;
+import javafx.util.Duration;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,6 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Scale;
+import javafx.scene.transform.Transform;
 import javafx.stage.Stage;
 
 public class AnimationReview extends Application {
@@ -61,21 +66,41 @@ public class AnimationReview extends Application {
         // translation animation
         Button btn_one = new Button("Translation Animation");
         btn_one.setLayoutX(50);
+        btn_one.setOnAction(e -> {
+            // double transX = 80;
+            // double transY = 50;
+            // Transform translate = Transform.translate(transX, transY);
+            // rc.getTransforms().add(translate);
+
+            KeyValue ky = new KeyValue(rc.translateXProperty(), 100);
+            KeyFrame kf = new KeyFrame(Duration.seconds(10), ky);
+            Timeline tm = new Timeline(kf);
+            tm.play();
+        });
 
 
         // Rotation animation
         Button btn_two = new Button("Rotation Animation");
         btn_two.setLayoutX(550);
+        btn_two.setOnAction(e -> {
+
+        });
 
 
         // Scale animation
         Button btn_three = new Button("Scale Animation");
         btn_three.setLayoutX(950);
+        btn_three.setOnAction(e -> {
+
+        });
 
 
         // Shear animation
         Button btn_four = new Button("Shear Animation");
         btn_four.setLayoutX(1350);
+        btn_four.setOnAction(e -> {
+
+        });
         
         
         Pane pn = new Pane(rc,c,tri,rc_two,btn_one,btn_two,btn_three,btn_four);
