@@ -19,7 +19,7 @@ public class AnimationReview extends Application {
         // Creating the shapes that will be animated
         // rectangle
         Rectangle rc = new Rectangle();
-        rc.setX(100);
+        rc.setX(50);
         rc.setY(500);
         rc.setWidth(200);
         rc.setHeight(135);
@@ -30,7 +30,7 @@ public class AnimationReview extends Application {
         // circle
         Circle c = new Circle();
         c.setRadius(95);
-        c.setLayoutX(600);
+        c.setLayoutX(550);
         c.setLayoutY(500);
         c.setFill(Color.MAGENTA);
         c.setStroke(Color.MISTYROSE);
@@ -38,20 +38,30 @@ public class AnimationReview extends Application {
 
         // Triangle
         Polygon tri = new Polygon(
-            1000,500,
-            1100,350,
-            1200,500
+            950,500,
+            1050,350,
+            1150,500
         );
         tri.setFill(Color.GREEN);
         tri.setStroke(Color.BLUE);
         tri.setStrokeWidth(6);
 
+        // Rectangle two
+        Rectangle rc_two = new Rectangle();
+        rc_two.setX(1350);
+        rc_two.setY(500);
+        rc_two.setWidth(80);
+        rc_two.setHeight(55);
+        rc_two.setFill(Color.RED);
+        rc_two.setStroke(Color.YELLOW);
+        rc_two.setStrokeWidth(6);
+
         // Buttons to control animations
 
         
         
-        Pane pn = new Pane(rc,c,tri);
-        pn.setMinWidth(1424);
+        Pane pn = new Pane(rc,c,tri,rc_two);
+        pn.setMinWidth(1524);
         pn.setMinHeight(800);
         
         Scene sc = new Scene(pn);
