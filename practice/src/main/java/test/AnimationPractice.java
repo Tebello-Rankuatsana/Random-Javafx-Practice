@@ -1,6 +1,8 @@
 package test;
 
 import java.io.IOException;
+// import java.sql.Time;
+
 import javafx.scene.shape.Path;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -72,6 +74,12 @@ public class AnimationPractice extends Application{
         KeyFrame keyF = new KeyFrame(Duration.seconds(10), keyV);
         Timeline rect_two_Timeline = new Timeline(keyF);
         rect_two_Timeline.play();
+
+        // Circle Animation
+        KeyValue ky_circ =  new KeyValue(circ.scaleXProperty(), 20);
+        KeyFrame kf_circ = new KeyFrame(Duration.seconds(10), ky_circ);
+        Timeline tm_circ = new Timeline(kf_circ);
+        tm_circ.play();
 
 
         // Buttons that control animation
