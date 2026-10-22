@@ -2,7 +2,9 @@ package test;
 
 import java.io.IOException;
 import javafx.scene.shape.Path;
-
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -14,6 +16,7 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class AnimationPractice extends Application{
     @Override 
@@ -56,6 +59,14 @@ public class AnimationPractice extends Application{
         rect_two.setHeight(65);
         rect_two.setFill(Color.AQUA);
         rect_two.setStroke(Color.BLACK);
+
+        // Animations 
+        // Rectangle Translation animation
+        KeyValue ky = new KeyValue(rect.translateXProperty(), 600);
+        KeyFrame kf = new KeyFrame(Duration.seconds(10), ky);
+        Timeline rect_timeline = new Timeline(kf);
+        rect_timeline.play();
+
 
         // Buttons that control animation
 
