@@ -81,6 +81,12 @@ public class AnimationPractice extends Application{
         Timeline tm_circ = new Timeline(kf_circ);
         tm_circ.play();
 
+        // Triangle(Poly animation)
+        KeyValue ky_tri = new KeyValue(poly.rotateProperty(), 100);
+        KeyFrame kf_tri = new KeyFrame(Duration.seconds(10), ky_tri);
+        Timeline tm_tri = new Timeline(kf_tri);
+        tm_tri.play();
+
 
         // Buttons that control animation
 
