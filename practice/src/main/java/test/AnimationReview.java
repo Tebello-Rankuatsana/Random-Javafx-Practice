@@ -1,6 +1,7 @@
 package test;
 
 import java.io.IOException;
+
 import javafx.util.Duration;
 
 import javafx.animation.KeyFrame;
@@ -80,18 +81,31 @@ public class AnimationReview extends Application {
 
 
         // Rotation animation
-        Button btn_two = new Button("Rotation Animation");
+        Button btn_two = new Button("Scale Animation");
         btn_two.setLayoutX(550);
         btn_two.setOnAction(e -> {
+            // y scale
+            KeyValue kv_y = new KeyValue(c.scaleYProperty(), 100);
+            KeyFrame kf_y = new KeyFrame(Duration.seconds(10), kv_y);
+            Timeline tm_y = new Timeline(kf_y);
+            tm_y.play();
+
+            KeyValue kv = new KeyValue(c.scaleXProperty(), 100);
+            KeyFrame kf = new KeyFrame(Duration.seconds(10), kv);
+            Timeline tm = new Timeline(kf);
+            tm.play();
 
         });
 
 
         // Scale animation
-        Button btn_three = new Button("Scale Animation");
+        Button btn_three = new Button("Rotation Animation");
         btn_three.setLayoutX(950);
         btn_three.setOnAction(e -> {
-
+            KeyValue kv = new KeyValue(tri.rotateProperty(), 100);
+            KeyFrame kf = new KeyFrame(Duration.seconds(10), kv);
+            Timeline tm = new Timeline(kf);
+            tm.play();
         });
 
 
