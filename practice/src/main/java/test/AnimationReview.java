@@ -80,7 +80,7 @@ public class AnimationReview extends Application {
         });
 
 
-        // Rotation animation
+        // Scale animation
         Button btn_two = new Button("Scale Animation");
         btn_two.setLayoutX(550);
         btn_two.setOnAction(e -> {
@@ -98,7 +98,7 @@ public class AnimationReview extends Application {
         });
 
 
-        // Scale animation
+        // Rotation animation
         Button btn_three = new Button("Rotation Animation");
         btn_three.setLayoutX(950);
         btn_three.setOnAction(e -> {
@@ -113,7 +113,7 @@ public class AnimationReview extends Application {
         Button btn_four = new Button("Shear Animation");
         btn_four.setLayoutX(1350);
         btn_four.setOnAction(e -> {
-
+            KeyValue kv = new KeyValue(rc_two.s, null)
         });
         
         
