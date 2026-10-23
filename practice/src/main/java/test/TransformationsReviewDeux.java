@@ -81,7 +81,7 @@ public class TransformationsReviewDeux extends Application {
 
         Button rotate_btn = new Button("Rotate");
         rotate_btn.setOnAction(e -> {
-            double degrees = 3;
+            double degrees = 10;
             double rotX = 10;
             double rotY = 10;
 
