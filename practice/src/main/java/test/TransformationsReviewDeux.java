@@ -31,6 +31,7 @@ public class TransformationsReviewDeux extends Application {
         c.setLayoutY(500);
         c.setFill(Color.BLUE);
         c.setStroke(Color.BLACK);
+        c.setStrokeWidth(6);
 
         Polygon tri = new Polygon(
             700.0,500.0,
