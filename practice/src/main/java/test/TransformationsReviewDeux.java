@@ -46,29 +46,29 @@ public class TransformationsReviewDeux extends Application {
         tri.setStrokeWidth(6);
 
         // Adding buttons for transformations
-        Button reset = new Button("Reset");
-        reset.setOnAction(e -> {
+        Button reset_btn = new Button("Reset");
+        reset_btn.setOnAction(e -> {
             c.getTransforms().clear();
             r.getTransforms().clear();
             tri.getTransforms().clear();
         });
-        reset.setLayoutX(100);
+        reset_btn.setLayoutX(100);
 
-        Button shear = new Button("Shear");
-        shear.setOnAction(e -> {
+        Button shear_btn = new Button("Shear");
+        shear_btn.setOnAction(e -> {
             r.getTransforms().add(new Shear(0,0.5));
         });
-        shear.setLayoutX(200);
+        shear_btn.setLayoutX(200);
 
 
-        Button translate = new Button("Translate");
-        translate.setOnAction(e -> {
+        Button translate_btn = new Button("Translate");
+        translate_btn.setOnAction(e -> {
             double transX = 10;
             double transY = 20;
             Transform move = Transform.translate(transX, transY);
             r.getTransforms().add(move);
         });
-        translate.setLayoutX(300);
+        translate_btn.setLayoutX(300);
 
         Button scale_btn = new Button("Scale");
         scale_btn.setOnAction(e -> {
