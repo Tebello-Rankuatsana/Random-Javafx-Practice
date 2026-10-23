@@ -30,13 +30,16 @@ public class TransformationsReviewDeux extends Application {
         c.setLayoutX(400);
         c.setLayoutY(500);
         c.setFill(Color.BLUE);
-        c.setStroke(Color.RED);
+        c.setStroke(Color.BLACK);
 
         Polygon tri = new Polygon(
             700.0,500.0,
             890.0,250.0,
             1080,500.0
         );
+        tri.setFill(Color.GREEN);
+        tri.setStroke(Color.BLACK);
+        tri.setStrokeWidth(6);
 
 
         Pane pn = new Pane(r,c,tri);
