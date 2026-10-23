@@ -92,7 +92,7 @@ public class TransformationsReviewDeux extends Application {
 
         
 
-        Pane pn = new Pane(r,c,tri);
+        Pane pn = new Pane(r,c,tri,reset_btn,shear_btn,translate_btn,scale_btn,rotate_btn);
         pn.setMinWidth(1500);
         pn.setMinHeight(800);
         Scene sc = new Scene(pn);
